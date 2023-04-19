@@ -2,10 +2,10 @@ package edu.kis.vh.nursery;
 
 public class DefaultCountingOutRhymer {
 
-    public static final int SIZE = 12;
+    public static final int MAX_SIZE = 12;
     public static final int EMPTY = -1;
-    public static final int IF_EMPTY = SIZE-EMPTY;
-    private final int[] numbers = new int[SIZE];
+    public static final int IF_EMPTY = MAX_SIZE-EMPTY;
+    private final int[] numbers = new int[MAX_SIZE];
 
     public int total = EMPTY;
 
