@@ -10,6 +10,7 @@ public class Node {
         value = i;
     }
 
+    
     public int getValue() {
         return value;
     }
