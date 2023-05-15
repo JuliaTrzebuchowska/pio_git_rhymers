@@ -1,17 +1,28 @@
 package edu.kis.vh.nursery;
 
-public class HanoiRhymer extends defaultCountingOutRhymer {
+/**
+ * HanoiRhymer to klasa dziedzicząca DefaultCountingOutRhymer i przysłania metodę countIn.
+ */
+public class HanoiRhymer extends DefaultCountingOutRhymer {
 
-int totalRejected = 0;
+    /**
+     * totalRejected to liczba odrzuconych numerów.
+     */
+    private int totalRejected = 0;
 
+    /**
+     *  reportRejected to metoda zwracająca liczbe całkowitą totalRejected.
+     * @return totalRejected
+     */
     public int reportRejected() {
         return totalRejected;
     }
 
+    @Override
     public void countIn(int in) {
-    if (!callCheck() && in > peekaboo())
+        if (!callCheck() && in > peekaboo())
             totalRejected++;
-            else
-                super.countIn(in);
+        else
+            super.countIn(in);
     }
 }
